@@ -1,35 +1,28 @@
 const computerOptions = ["rock", "paper", "scissors"];
 
-function computerPlay(choice) {
-  
-  let randomChoice = Math.floor(Math.random() * choice.length);
-  
-  let i = choice[randomChoice];
-  console.log('Computer choice is', i);
-  // return i;
+function computerPlay() {
+  let randomChoice = computerOptions[Math.floor(Math.random() * computerOptions.length)];
+  console.log('Computer choice is', randomChoice);
+  return randomChoice;
 }
 
 
-computerSelection = computerPlay(computerOptions);
-
-// playerSelection = prompt("Please input rock, paper or scissors:".toLowerCase());
-
-//// computerPlay(choices);
-// console.log(result);
-
 function playRound(playerSelection, computerSelection) {
-  // playerSelection = prompt("Please input rock, paper or scissors:".toLowerCase());
-  playerSelection = 'rock';
-  console.log('player choice is:', playerSelection)
-  if (computerSelection === playerSelection) {
-    console.log(tie)
-  }
   
-playRound();
-  
+  playerSelection = prompt("Please input rock, paper or scissors:").toLowerCase();
+  console.log('playSelect is', playerSelection);
 
-  
-  // playerSelection = playerChoice;
-  // console.log('Player choice is', playerChoice);
+  computerSelection = computerPlay();
+  console.log('compPlay is',computerSelection);
+
+  if (playerSelection === computerSelection) {
+    console.log('The game is a tie!');
+  }    
+  else if ((playerSelection === 'rock' && computerSelection === 'paper') | (playerSelection === 'paper' && computerSelection === 'scissors')) {
+    console.log('Computer wins!');
+  }
+  else {
+    console.log('Player wins!');
+  }
 
 }

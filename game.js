@@ -1,4 +1,4 @@
-const computerOptions = ["rock", "paper", "scissors"];
+const computerOptions = ["paper", "scissors", "stone"];
 playerScore = 0;
 computerScore = 0;
 
@@ -12,7 +12,7 @@ function computerPlay() {
 // 2 - Play a single round with the computer
 function playRound(playerSelection, computerSelection) { 
   
-  playerSelection = prompt("Please input rock, paper or scissors:").toLowerCase();
+  playerSelection = alert("Please click on Paper, Scissors or stone:").toLowerCase();
   computerSelection = computerPlay();
   console.log('compPlay is',computerSelection);
 
@@ -33,24 +33,27 @@ function playRound(playerSelection, computerSelection) {
 // 3 - Test the playRound function before continuing to multiple round function
 console.log(playRound()); 
 
-// 4 - Play a 5-round game
-function game() {  
+// ***Revisiting Paper Scissors Stone*** 
+// Comment out the "Play 5 Rounds" function
+
+// // 4 - Play a 5-round game
+// function game() {  
   
-  playerScore = 0;
-  computerScore = 0;
+//   playerScore = 0;
+//   computerScore = 0;
 
-  for (let i = 0; i < 5; i++) {
-    playRound();
-    }
-  if (playerScore > computerScore) {
-    console.log("The player wins!")
-  } 
-  else if (computerScore > playerScore) {
-    console.log("The computer wins!")
-  }
-}
+//   for (let i = 0; i < 5; i++) {
+//     playRound();
+//     }
+//   if (playerScore > computerScore) {
+//     console.log("The player wins!")
+//   } 
+//   else if (computerScore > playerScore) {
+//     console.log("The computer wins!")
+//   }
+// }
 
-game();
+// game();
 
 
 
